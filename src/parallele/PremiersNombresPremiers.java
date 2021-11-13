@@ -8,7 +8,7 @@ public class PremiersNombresPremiers {
     static final long borne = 14_000_000 ;
 
     public static void main(String[] args) {
-        final long début = System.nanoTime() ;
+        final long debut = System.nanoTime() ;
 
         for (long i = 1; i <= borne; i++) {
             if (BigInteger.valueOf(i).isProbablePrime(50))
@@ -16,11 +16,11 @@ public class PremiersNombresPremiers {
         }
 
         final long fin = System.nanoTime() ;
-        final long durée = (fin - début) / 1_000_000 ;
+        final long duree = (fin - debut) / 1_000_000 ;
 
         System.out.print("Nombre de nombres premiers inférieurs à " + borne + " : ") ;
         System.out.println(premiersNombresPremiers.size()) ;
-        System.out.format("Durée du calcul: %.3f s.%n", (double) durée/1000) ;
+        System.out.format("Durée du calcul: %.3f s.%n", (double) duree/1000) ;
     }
 }
 
