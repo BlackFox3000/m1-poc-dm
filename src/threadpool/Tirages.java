@@ -1,18 +1,17 @@
 package threadpool;
 
-import javax.swing.*;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Callable;
 
-public class TiragesPremiers implements Callable<List<Long>> {
+public class Tirages implements Callable<List<Long>> {
     final long nbTirages;
     final long iterator;
     ArrayList<Long> premiersNombresPremiers = new ArrayList<>();
 
     //ici on configure le nombre de boucle à faire
-    public TiragesPremiers(int nbTirage, int iterateur) {
+    public Tirages(int nbTirage, int iterateur) {
         nbTirages = nbTirage;
         iterator = iterateur;
     }
@@ -29,6 +28,5 @@ public class TiragesPremiers implements Callable<List<Long>> {
         return premiersNombresPremiers;
 
     }
-
 
 }
